@@ -1,0 +1,30 @@
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: HomeView,
+    },
+    {
+      path: "/detail/:id",
+      name: "detail",
+      component: () => import("../views/DetailView.vue"),
+    },
+    {
+      path: "/tv/detail/:id",
+      name: "tvdetail",
+      component: () => import("../views/TVDetailView.vue"),
+    },
+    {
+      path: "/search/:searchkey",
+      name: "search",
+      component: () => import("../views/SearchView.vue"),
+    },
+  ],
+});
+
+export default router;

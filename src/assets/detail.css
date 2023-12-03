@@ -1,0 +1,274 @@
+/* 내용 */
+
+.player-contents {
+  position: relative;
+  height: 590px;
+}
+
+.player-bg-image {
+  position: relative;
+  width: 1120px;
+  height: 590px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-detail-area {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.movie-data {
+  display: flex;
+  margin-bottom: 24px;
+}
+.text {
+  max-width: 760px;
+  font-size: 16px;
+  color: #a5a5a5;
+  line-height: 24px;
+  word-break: break-all;
+}
+
+.dot {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin: 12px 8px 0;
+  border-radius: 50%;
+  background-color: #a5a5a5;
+  vertical-align: middle;
+  content: "";
+}
+
+.divider {
+  width: 1120px;
+  height: 1px;
+  background-color: #a5a5a5;
+  margin: 45px auto;
+}
+
+/* 영화 정보 */
+.detail-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-div {
+  width: 1120px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  color: #a5a5a5;
+}
+
+.thumb-box {
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  width: 185px;
+  height: 278px;
+  border-radius: 12px;
+}
+
+.thumb-box-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.movie-title-text {
+  color: white;
+}
+
+.skeleton-text {
+  height: 23px;
+  border-radius: 12px;
+  -webkit-animation: skeleton-gradient 1.8s infinite ease-in-out;
+  animation: skeleton-gradient 1.8s infinite ease-in-out;
+}
+.movie-info {
+  margin-left: 24px;
+  min-height: 410px;
+  width: 100%;
+}
+
+.movie-info-text {
+  max-width: 900px;
+}
+
+.detail-info-table td,
+.detail-info-table th {
+  padding-top: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-align: left;
+  vertical-align: top;
+}
+
+.detail-info-table .genre {
+  color: #fff;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.movie-grade-all {
+  background-color: #4ba352;
+  padding: 8px 8px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-grade-all-text {
+  color: black;
+  height: 20px;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  align-items: end;
+}
+
+.movie-grade-notall {
+  background-color: #c52b30;
+}
+
+.movie-grade-notall-text {
+  color: white;
+}
+.trailer-modal-backdrop {
+  position: fixed;
+  inset: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+.trailer-modal {
+  background-color: black;
+  color: white;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 74px auto;
+  text-align: center;
+  width: 90%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transform: none;
+}
+
+.trailer-modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.trailer-modal-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.trailer-modal-info-text {
+  margin-top: 400px;
+}
+
+.trailer-modal-content {
+  width: 100%;
+  height: calc(100% - 61px);
+}
+
+.trailer-modal-iframe {
+  width: inherit;
+  height: 100%;
+}
+
+.trailerplay-icon-btn {
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.trailer-play-icon {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  color: white;
+}
+
+.close-icon {
+  font-size: 20px;
+}
+
+.similar-movie-wrap {
+  margin-top: 50px;
+}
+
+.poster-img {
+  width: 216px;
+  height: 327px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.backdrop-img {
+  width: 550px;
+  height: 327px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.backdrop-skeleton {
+  margin-right: 20px;
+  min-width: 550px;
+  height: 327px;
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: skeleton-gradient 1.8s infinite ease-in-out;
+  animation: skeleton-gradient 1.8s infinite ease-in-out;
+}
+
+.no-image-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.no-image {
+  color: white;
+  font-size: 90px;
+  margin-bottom: 40px;
+}
+
+.star {
+  color: red;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-left: 8px;
+}
