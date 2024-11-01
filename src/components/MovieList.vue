@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'
 import { useRouter } from 'vue-router';
 
 import { GET_POSTER_URI } from '../utils/constants';
@@ -72,7 +71,7 @@ const handleImageError = (event) => {
                 </button> -->
             </div>
             <div :class="['picture-area', loading ? 'picture-area-skeleton' : '']">
-                <div v-if="loading" v-for=" index  in  5" :key="index" class="skeleton"></div>
+                <div v-if="loading" v-for=" index in 5" :key="index" class="skeleton"></div>
                 <swiper v-else :slides-per-view="5" :space-between="10" class="mySwiper">
                     <swiper-slide v-for="item, index in props.movieData" :key="item.id">
                         <div class="picture" @click="item.poster_path && goDetail(item.id)">

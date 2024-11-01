@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, computed } from 'vue'
+import { computed } from 'vue'
 import { GET_TVBACKPOSTER_URI } from '../utils/constants';
 import { ref } from 'vue'
 
@@ -38,8 +38,9 @@ const trailerVideoKey = computed(() => {
                         </div>
 
                         <div class="trailer-modal-content">
-                            <iframe v-if="trailerVideoKey" :src="'https://www.youtube.com/embed/' + `${trailerVideoKey}`"
-                                frameborder="0" allowfullscreen class="trailer-modal-iframe"></iframe>
+                            <iframe v-if="trailerVideoKey"
+                                :src="'https://www.youtube.com/embed/' + `${trailerVideoKey}`" frameborder="0"
+                                allowfullscreen class="trailer-modal-iframe"></iframe>
                             <div v-else class="trailer-modal-text trailer-modal-info-text">
                                 예고편이 존재하지 않습니다.
                             </div>

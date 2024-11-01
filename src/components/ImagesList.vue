@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'
 
 import { GET_POSTER_URI, GET_BACKDROPS_URI } from '../utils/constants';
 
@@ -42,13 +41,14 @@ const props = defineProps({
             </div>
             <div :class="['picture-area', loading ? 'picture-area-skeleton' : '']"
                 :style="{ overflow: poster ? '' : 'hidden' }">
-                <div v-if="loading" v-for=" index  in  5" :key="index" :class="[poster ? 'skeleton' : 'backdrop-skeleton']">
+                <div v-if="loading" v-for=" index in 5" :key="index"
+                    :class="[poster ? 'skeleton' : 'backdrop-skeleton']">
                 </div>
                 <swiper v-else :slides-per-view="poster ? 5 : 2" :space-between="poster ? 10 : 20" class="mySwiper">
                     <swiper-slide v-for="item, index in props.imageData" :key="item.id">
                         <div class="picture" style="margin-bottom: 0px;">
-                            <img :src="`${poster ? GET_POSTER_URI : GET_BACKDROPS_URI}${item.file_path}`" :alt="item.title"
-                                :class="[poster ? 'poster-img' : 'backdrop-img']">
+                            <img :src="`${poster ? GET_POSTER_URI : GET_BACKDROPS_URI}${item.file_path}`"
+                                :alt="item.title" :class="[poster ? 'poster-img' : 'backdrop-img']">
                         </div>
 
                     </swiper-slide>

@@ -1,5 +1,5 @@
 <script setup>
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 import { GET_POSTER_URI } from '../utils/constants';
 import moment from 'moment';
 import { useMovieStore } from '@/stores/movie.js'
